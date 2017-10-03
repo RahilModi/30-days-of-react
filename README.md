@@ -5,3 +5,5 @@
  3  What is Babel? Write first component.  
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**RactDOM.render(<what>,<where>)** places the React Component on the page  
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;All react components require at least a render() function.  
+ 4  Complex Components.
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**create-react-app**
