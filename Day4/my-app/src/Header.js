@@ -1,17 +1,38 @@
 import React, { Component } from 'react';
+import MenuButton from './MenuButton';
 
-class Header extends React.Component {
+class Header extends Component {
+  constructor(props){
+    super(props);
+
+    this.state = {
+      searchVisible: false
+    }
+  }
+
+  showSearch(){
+    this.setState({
+      searchVisible: !this.state.searchVisible
+    })
+  }
   render() {
+    // Classes to add to the <input /> element
+    let searchInputClasses = ["searchInput"];
+
+    // Update the class array if the state is visible
+    if (this.state.searchVisible) {
+      searchInputClasses.push("active");
+    }
+
     return (
       <div className="header">
-        <div className="menuIcon">
-          <div className="dashTop"></div>
-          <div className="dashBottom"></div>
-          <div className="circle"></div>
-        </div>
-        <span className="title">Timeline</span>
-        <input type="text" className="searchInput" placeholder="search..." />
-        <div className="fa fa-search searchIcon" />
+        <MenuButton />
+        <span className="title">
+          {this.props.title}
+        </span>
+        <input type="text" className={searchInputClasses.join(' ')} placeholder="search..." />
+
+        <div onClick = {this.showSearch.bind(this)} className="fa fa-search searchIcon" />
       </div>
     );
   }

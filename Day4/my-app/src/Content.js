@@ -1,23 +1,17 @@
 import React, { Component } from 'react';
+import ActivityItem from './ActivityItem'
 
 class Content extends Component {
   render() {
-    return (
+    const {activities} = this.props; //ES6 destructuring => const activities = this.props.activities;
+
+    return(
       <div className="content">
         <div className="line" />
         {/*Timeline item*/}
-        <div className="item">
-          <div className="avatar">
-            <img
-              alt="Dog"
-              src="http://www.croop.cl/UI/twitter/images/doug.jpg"
-            />
-          </div>
-          <span className="time">An hour ago</span>
-          <p> Ate lunch </p>
-          <div className="commentCount">2</div>
-        </div>
-        {/*...*/}
+        {activities.map((activity) => 
+            <ActivityItem activity={activity} />
+        )}
       </div>
     );
   }
