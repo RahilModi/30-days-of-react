@@ -9,4 +9,7 @@
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**create-react-app**  
  5	Data Driven - How to use props  
  6  How to use State - Creating creat-react-app myapp2  => clock  and Added state in Header component in my-app(Day-4)  
+ 7  Component lifecycle and changed activities to Github events  
+ 8	PropTypes: Basic, Collection, Element, Object, Customs  
+ 9  Styles: CSS
 

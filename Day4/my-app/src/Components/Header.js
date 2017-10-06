@@ -15,6 +15,8 @@ class Header extends Component {
       searchVisible: !this.state.searchVisible
     })
   }
+
+
   render() {
     // Classes to add to the <input /> element
     let searchInputClasses = ["searchInput"];
@@ -23,16 +25,23 @@ class Header extends Component {
     if (this.state.searchVisible) {
       searchInputClasses.push("active");
     }
-
+    const wrapperStyle={
+      backgroundColor: 'rgba(251, 202, 43, 1)'
+    }
+    
+    const titleStyle = {
+      color: '#110000'
+    }
+    
     return (
-      <div className="header">
+      <div className="header" style={wrapperStyle}>
         <MenuButton />
-        <span className="title">
+        <span className="title" style={titleStyle}>
           {this.props.title}
         </span>
         <input type="text" className={searchInputClasses.join(' ')} placeholder="search..." />
 
-        <div onClick = {this.showSearch.bind(this)} className="fa fa-search searchIcon" />
+        <div onClick = {this.showSearch.bind(this)} className="fa fa-search searchIcon" style={titleStyle}/>
       </div>
     );
   }
